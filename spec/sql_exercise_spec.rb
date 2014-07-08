@@ -35,7 +35,6 @@ describe SqlExercise do
     end
 
     it "can return three customers" do
-      skip
 
       expected_customers = [
         {
@@ -73,7 +72,6 @@ describe SqlExercise do
 
   describe "#order_customers" do
     it "can orders the customers in alphabetical order" do
-      skip
       alphabetical_customers = sql_exercise.order_customers("ASC")
 
       expect(alphabetical_customers.first["name"]).to eq("Coleman Prohaska Jr.")
@@ -81,7 +79,6 @@ describe SqlExercise do
     end
 
     it "can orders the customers in reverse alphabetical order" do
-      skip
       alphabetical_customers = sql_exercise.order_customers("DESC")
 
       expect(alphabetical_customers.first["name"]).to eq("Zelma Davis")
@@ -91,7 +88,6 @@ describe SqlExercise do
 
   describe "#id_and_name_for_customers" do
     it "returns only the id and name for each customer" do
-      skip
       customers = sql_exercise.id_and_name_for_customers
 
       expect(customers.length).to eq(10)
@@ -104,7 +100,6 @@ describe SqlExercise do
 
   describe "#all_items" do
     it "returns all items" do
-      skip
       items = sql_exercise.all_items
 
       expect(items.length).to eq(9)
@@ -118,26 +113,22 @@ describe SqlExercise do
 
   describe "#find_item_by_name" do
     it "returns the item with the given name" do
-      skip
       expect(sql_exercise.find_item_by_name("boot01")).to eq({"id" => "7", "name" => "boot01", "description" => "hiking boots"})
     end
 
     it "returns nil if no item is found" do
-      skip
       expect(sql_exercise.find_item_by_name("nonehere")).to eq(nil)
     end
   end
 
   describe "#count_customers" do
     it "returns the number of customers" do
-      skip
       expect(sql_exercise.count_customers).to eq(10)
     end
   end
 
   describe "#sum_order_amounts" do
     it "returns the total of all order amounts" do
-      skip
       sum = sql_exercise.sum_order_amounts
 
       expect(sum).to eq(2466.41)
@@ -146,7 +137,6 @@ describe SqlExercise do
 
   describe "#minimum_order_amount_for_customers" do
     it "returns the minimum order amount for each customer" do
-      skip
       minimum_order_amounts = sql_exercise.minimum_order_amount_for_customers
 
       customer_1 = minimum_order_amounts.find { |order| order["customer_id"] == "1" }
@@ -157,7 +147,6 @@ describe SqlExercise do
 
   describe "#customer_order_totals" do
     it "returns the customer id, customer name, and total of all their orders for each customer" do
-      skip
       orders = sql_exercise.customer_order_totals
 
       order_10 = orders.find { |order| order["customer_id"] == "10" }
@@ -168,7 +157,6 @@ describe SqlExercise do
 
   describe "#items_ordered_by_user" do
     it "returns the item name for all the orders placed by the given customer id" do
-      skip
       expected_orders_for_second_customer = [
         "boot01",
         "bike03",
@@ -186,7 +174,6 @@ describe SqlExercise do
 
   describe "#customers_that_bought_item" do
     it "returns the correct customer names and ids for customers that bought 'bike01'" do
-      skip
       expected_customers = [
         {
           "customer_name" => "Tyrell Von DDS", "id" => "2"
@@ -221,7 +208,6 @@ describe SqlExercise do
     end
 
     it "returns the correct customer names and ids for customers that bought 'boot01'" do
-      skip
       expected_customers = [
         {
           "customer_name" => "Tyrell Von DDS", "id" => "2"
@@ -258,7 +244,6 @@ describe SqlExercise do
 
   describe "#customers_that_bought_item_in_state" do
     it "returns the first customer that bought 'bike03' that lives in Maine" do
-      skip
       expected_user = {
         "id" => "9",
         "name" => "Wilhelmine Huels",
